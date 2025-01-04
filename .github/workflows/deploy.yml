@@ -39,7 +39,4 @@ jobs:
       run: scp -r ./dist/* juhojarvi@62.248.139.131:portfolio/
 
     - name: Restart Nginx
-      run: |
-        ssh juhojarvi@62.248.139.131 << 'EOF'
-          sudo systemctl restart nginx
-        EOF
+      run: ssh juhojarvi@62.248.139.131 'sudo systemctl restart nginx'
