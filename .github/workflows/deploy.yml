@@ -29,13 +29,14 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Add Raspberry Pi to known_hosts
+      run: ssh-keyscan 62.248.139.131 >> ~/.ssh/known_hosts
+
     - name: Copy files to Raspberry Pi
       run: scp -r ./dist/* juhojarvi@62.248.139.131:/www/portfolio/
 
-    - name: Install dependencies and restart Nginx
+    - name: Restart Nginx
       run: |
         ssh juhojarvi@62.248.139.131 << 'EOF'
-          cd /www/portfolio/
-          npm install --production
           sudo systemctl restart nginx
         EOF
