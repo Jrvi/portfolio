@@ -35,6 +35,9 @@ jobs:
     - name: Copy files to Raspberry Pi
       run: scp -r ./dist/* juhojarvi@62.248.139.131:/tmp/portfolio/
 
+    - name: Clean target directory
+      run: ssh juhojarvi@62.248.139.131 'sudo rm -rf /www/portfolio/*'
+
     - name: Move files to target directory with sudo
       run: ssh juhojarvi@62.248.139.131 'sudo mv /tmp/portfolio/* /www/portfolio/'
 
