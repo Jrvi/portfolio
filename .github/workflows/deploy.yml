@@ -32,11 +32,8 @@ jobs:
     - name: Add Raspberry Pi to known_hosts
       run: ssh-keyscan 62.248.139.131 >> ~/.ssh/known_hosts
 
-    - name: Create target directory
-      run: ssh juhojarvi@62.248.139.131 'mkdir -p portfolio/'
-
     - name: Copy files to Raspberry Pi
-      run: scp -r ./dist/* juhojarvi@62.248.139.131:portfolio/
+      run: scp -r ./dist/* juhojarvi@62.248.139.131:/www/portfolio/
 
     - name: Restart Nginx
       run: ssh juhojarvi@62.248.139.131 'sudo systemctl restart nginx'
