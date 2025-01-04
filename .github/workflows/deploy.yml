@@ -33,10 +33,10 @@ jobs:
       run: ssh-keyscan 62.248.139.131 >> ~/.ssh/known_hosts
 
     - name: Create target directory
-      run: ssh juhojarvi@62.248.139.131 'mkdir -p /www/portfolio/'
+      run: ssh juhojarvi@62.248.139.131 'mkdir -p portfolio/'
 
     - name: Copy files to Raspberry Pi
-      run: scp -r ./dist/* juhojarvi@62.248.139.131:/www/portfolio/
+      run: scp -r ./dist/* juhojarvi@62.248.139.131:portfolio/
 
     - name: Restart Nginx
       run: |
