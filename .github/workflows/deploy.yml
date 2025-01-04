@@ -33,7 +33,11 @@ jobs:
       run: ssh-keyscan 62.248.139.131 >> ~/.ssh/known_hosts
 
     - name: Copy files to Raspberry Pi
-      run: scp -r ./dist/* juhojarvi@62.248.139.131:/www/portfolio/
+      run: |
+        ssh juhojarvi@62.248.139.131 << 'EOF'
+          sudo rm -rf /www/portfolio/*
+        EOF
+        scp -r ./dist/* juhojarvi@62.248.139.131:/www/portfolio/
 
     - name: Restart Nginx
       run: |
