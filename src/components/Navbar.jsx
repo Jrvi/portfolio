@@ -18,7 +18,7 @@ const Navbar = () => {
         <a href="#experience" style={{ color: '#fff', textDecoration: 'none', marginRight: '20px' }}>Kokemus</a>
         <a href="#education" style={{ color: '#fff', textDecoration: 'none' }}>Koulutus</a>
       </div>
-      <div>
+      <div style={{ maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
         <a href="mailto:juho.jaervi@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>Ota yhteyttä</a>
       </div>
     </nav>
