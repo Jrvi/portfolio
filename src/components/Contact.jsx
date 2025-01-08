@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Contact = () => {
-  const user = 'juho.jarvi';
+  const user = 'juho.jaervi';
   const domain = 'gmail.com';
 
   return (

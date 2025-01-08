@@ -19,7 +19,7 @@ const Navbar = () => {
         <a href="#education" style={{ color: '#fff', textDecoration: 'none' }}>Koulutus</a>
       </div>
       <div>
-        <a href="#contact" style={{ color: '#fff', textDecoration: 'none' }}>Ota yhteyttä</a>
+        <a href="mailto:juho.jaervi@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>Ota yhteyttä</a>
       </div>
     </nav>
   );
