@@ -143,3 +143,92 @@ img {
 .skill {
     margin-bottom: 10px;
 }
+
+/* Hampurilaisvalikon tyylit */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cv-container {
+    flex-direction: column;
+  }
+
+  .aside {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .section {
+    margin-top: 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}

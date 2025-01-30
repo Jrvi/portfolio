@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes, Route, Link
@@ -9,7 +10,12 @@ import CV from './components/CV'
 import "./App.css"
 
 const App = () => {
-  // TODO: Tää ois siirrettävä
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const padding = {
     padding: 15
   }
@@ -17,10 +23,17 @@ const App = () => {
   return (
     <Router>
       <div className="navbar">
-        <Link style={padding} to="/">Koti</Link>
-        <Link style={padding} to="/projects">Projektit</Link>
-        <Link style={padding} to="/cv">Ansioluettelo</Link>
-        <a className="contact-link" style={padding} href="mailto:juho.jaervi@gmail.com">Ota yhteyttä</a>
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+          <Link style={padding} to="/" onClick={toggleMenu}>Koti</Link>
+          <Link style={padding} to="/projects" onClick={toggleMenu}>Projektit</Link>
+          <Link style={padding} to="/cv" onClick={toggleMenu}>Ansioluettelo</Link>
+          <a className="contact-link" style={padding} href="mailto:juho.jaervi@gmail.com" onClick={toggleMenu}>Ota yhteyttä</a>
+        </div>
       </div>
 
       <Routes>
