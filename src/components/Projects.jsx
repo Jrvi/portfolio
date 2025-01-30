@@ -37,22 +37,22 @@ const Projects = () => {
     console.log(work_projects);
 
     return (
-      <div style={{ padding: '20px' }}>
-        <h2>Harraste projektit</h2>
+      <div className="projects-container">
+        <h2 className="projects-title">Harraste projektit</h2>
         {hobby_projects.map((project, index) => (
-          <div key={index} style={{ marginBottom: '20px' }}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            <p><strong>Teknologiat:</strong> {project.technologies.join(', ')}</p>
-            <p><a href={project.link} target="_blank" rel="noopener noreferrer">Lähdekoodi</a></p>
+          <div key={index} className="project-item">
+            <h3 className="project-name">{project.name}</h3>
+            <p className="project-description">{project.description}</p>
+            <p className="project-technologies"><strong>Teknologiat:</strong> {project.technologies.join(', ')}</p>
+            <p><a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">Lähdekoodi</a></p>
           </div>
         ))}
-        <h2>Työ projekteista</h2>
+        <h2 className="projects-title">Työ projekteista</h2>
         {work_projects.map((project, index) => (
-          <div key={index} style={{ marginBottom: '20px' }}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            <p><strong>Teknologiat:</strong> {project.technologies.join(', ')}</p>
+          <div key={index} className="project-item">
+            <h3 className="project-name">{project.name}</h3>
+            <p className="project-description">{project.description}</p>
+            <p className="project-technologies"><strong>Teknologiat:</strong> {project.technologies.join(', ')}</p>
           </div>
         ))}
       </div>
