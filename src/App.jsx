@@ -43,16 +43,15 @@ const App = () => {
       </Routes>
 
       <div className="footer">
-        <i>Portfolio site, Juho Järvi 2025</i>
         <div>
           <a href="https://www.linkedin.com/in/juho-j%C3%A4rvi-8371931ab/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i> LinkedIn
-          </a>
-          {' | '}
+          </a>  
           <a href="https://github.com/Jrvi" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i> GitHub
           </a>
         </div>
+        <i>Portfolio site, Juho Järvi 2025</i>
       </div>
     </Router>
   )

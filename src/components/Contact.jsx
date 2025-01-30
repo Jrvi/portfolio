@@ -4,7 +4,7 @@ const Contact = () => {
 
   return (
     <div>
-      <p>
+      <p className="contact">
         Email: {user}@{domain}
       </p>
     </div>

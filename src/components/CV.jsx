@@ -10,9 +10,9 @@ const CV = () => {
     <div className="cv-container">
       <aside className="aside">
         <img src={picture} width={picture_width} height={picture_height} alt="Me" />
-        <h2>Juho Järvi</h2>
+        <h2 className="name">Juho Järvi</h2>
         <Contact />
-        <h3>Taidot</h3>
+        <h3 className="skills-h">Taidot</h3>
         <div className="skills">
           <Skill name="Java" percentage={70} />
           <Skill name="Python" percentage={60} />
@@ -29,9 +29,9 @@ const CV = () => {
       </aside>
       <div className="main-content">
         <section id="experience">
-          <h2 className="left">Kokemus</h2>
+          <h1 className="left">Kokemus</h1>
           <article>
-            <h3>Software Developer</h3>
+            <h3 className="left">Software Developer</h3>
             <p>Työnantaja: Solteq Oyj</p>
             <p>Sijainti: Jyväskylä</p>
             <p>Kesto: marraskuu 2022-nykyhetki</p>
@@ -46,9 +46,9 @@ const CV = () => {
           </article>
         </section>
         <section id="education">
-          <h2 className="left">Koulutus</h2>
+          <h1 className="left">Koulutus</h1>
           <article>
-            <h3>Jyväskylän Yliopisto</h3>
+            <h3 className="left">Jyväskylän Yliopisto</h3>
             <p>aika: 2023-nykyhetki</p>
             <p>Tutkinto: Teknologiajohtaminen kandidaatti- ja DI-tutkinto</p>
             <p>Kuvaus: Vaihdoin opiskelemaan tietotekniikan kandiohjelmasta teknologiajohtamisen kandiohjelmaan</p>
