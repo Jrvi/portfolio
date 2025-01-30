@@ -28,11 +28,15 @@ const App = () => {
           <div></div>
           <div></div>
         </div>
-        <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
-          <Link style={padding} to="/" onClick={toggleMenu}>Koti</Link>
-          <Link style={padding} to="/projects" onClick={toggleMenu}>Projektit</Link>
-          <Link style={padding} to="/cv" onClick={toggleMenu}>Ansioluettelo</Link>
-          <a className="contact-link" style={padding} href="mailto:juho.jaervi@gmail.com" onClick={toggleMenu}>Ota yhteyttä</a>
+        <div className="navbar-links-container">
+          <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+            <Link style={padding} to="/" onClick={toggleMenu}>Koti</Link>
+            <Link style={padding} to="/projects" onClick={toggleMenu}>Projektit</Link>
+            <Link style={padding} to="/cv" onClick={toggleMenu}>Ansioluettelo</Link>
+          </div>
+          <div className="contact-me">
+            <a className="contact-link" style={padding} href="mailto:juho.jaervi@gmail.com" onClick={toggleMenu}>Ota yhteyttä</a>
+          </div>
         </div>
       </div>
 
