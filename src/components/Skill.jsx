@@ -1,5 +1,4 @@
 import Bar from "./Bar"
-import './bar.css'
 
 const Skill = ({ name, percentage }) => {
     return (
