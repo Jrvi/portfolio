@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --verbose
+RUN npm install
 
 # Optionally, run npm ci to ensure a clean install of dependencies
 RUN npm ci
