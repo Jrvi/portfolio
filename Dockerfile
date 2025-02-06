@@ -8,7 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --verbose
+
+# Optionally, run npm ci to ensure a clean install of dependencies
+RUN npm ci
+
+# Optionally, run npm audit fix to fix vulnerabilities
+RUN npm audit fix
 
 # Copy the entire application code to the container
 COPY . .
