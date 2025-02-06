@@ -1,35 +1,20 @@
-# Use the official Node.js runtime as the base image
-FROM node:18 as build
+# Käytä Node.js -kuvaa
+FROM node:18-alpine
 
-# Set the working directory in the container
+# Aseta työskentelyhakemisto
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
+# Kopioi package.json ja package-lock.json
 COPY package*.json ./
 
-# Install dependencies
+# Asenna riippuvuudet
 RUN npm install
 
-# Optionally, run npm ci to ensure a clean install of dependencies
-RUN npm ci
-
-# Optionally, run npm audit fix to fix vulnerabilities
-RUN npm audit fix
-
-# Copy the entire application code to the container
+# Kopioi koko sovelluksen koodi konttiin
 COPY . .
 
-# Build the React app for production
+# Rakenna React-sovellus tuotantoa varten
 RUN npm run build
 
-# Use Nginx as the production server
-FROM nginx:alpine
-
-# Copy the built React app to Nginx's web server directory
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Expose port 80 for the Nginx server
-EXPOSE 80
-
-# Start Nginx when the container runs
-CMD ["nginx", "-g", "daemon off;"]
+# Käynnistä React-sovellus
+CMD ["npm", "start"]
