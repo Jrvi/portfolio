@@ -15,7 +15,7 @@ const Projects = () => {
       {
         name: "Portfolio-sivusto",
         description: "Henkilökohtainen portfoliosivusto, jossa esittelen taitojani, kokemuksiani ja projektejani.",
-        technologies: ["React", "CSS"],
+        technologies: ["React", "CSS", "Docker"],
         link: "https://github.com/Jrvi/portfolio"
       },
       {
