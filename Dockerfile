@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 3001
 
 # Käynnistä React-sovellus ja aseta portti 3001
-CMD ["npm", "start", "--", "--port", "3001"]
+CMD ["npm", "start"]

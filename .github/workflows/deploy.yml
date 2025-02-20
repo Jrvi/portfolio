@@ -48,4 +48,4 @@ jobs:
       run: ssh juhojarvi@62.248.139.131 'docker stop portfolio || true && docker rm portfolio || true'
 
     - name: Deploy Docker container on Raspberry Pi
-      run: ssh juhojarvi@62.248.139.131 'docker run -d -p 3001:80 --name portfolio portfolio:latest'
+      run: ssh juhojarvi@62.248.139.131 'docker run -d -p 8001:80 --name portfolio portfolio:latest'
