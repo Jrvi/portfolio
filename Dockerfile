@@ -16,5 +16,8 @@ COPY . .
 # Rakenna React-sovellus tuotantoa varten
 RUN npm run build
 
-# Käynnistä React-sovellus
-CMD ["npm", "start"]
+# Avaa portti 3001
+EXPOSE 3001
+
+# Käynnistä React-sovellus ja aseta portti 3001
+CMD ["npm", "start", "--", "--port", "3001"]
