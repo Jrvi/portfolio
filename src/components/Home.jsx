@@ -11,8 +11,8 @@ const Home = () => {
       </div>
       <div className="section">
         <h2 className="center">Käynnissä oleva harraste projekti</h2>
-        <p>Työn alla on <strong>jyty-web</strong></p>
-        <p><a href="https://github.com/Jrvi/jyty-web" target="_blank" rel="noopener noreferrer">Lähdekoodi</a></p>
+        <p>Työn alla on <strong>time-tracker</strong></p>
+        <p><a href="https://github.com/Jrvi/time-tracker" target="_blank" rel="noopener noreferrer">Lähdekoodi</a></p>
       </div>
       <div className="section">
         <h2 className="center">Lisätietoja</h2>
